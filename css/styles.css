@@ -1,10 +1,11 @@
 :root {
-    --body: rgb(44, 28, 102);
+    --body: rgb(36, 19, 97);
     --text: #fff;
-    --header: rgb(48, 37, 97);
-    --main: rgb(21, 5, 66);
+    --header: rgba(48, 37, 97, 0.884);
+    --main: rgba(21, 5, 66, 0.842);
     --nav: rgba(35, 16, 88, 0.781);
     --anim: rgb(191, 168, 253);
+    --btn: rgb(22, 3, 73);
 }
 
 * {
@@ -18,6 +19,11 @@ body {
     background-color: var(--body);
     color: var(--text);
     overflow-x: hidden;
+    background-image: url("/MLSites_Responsive/pictures/backgroundstars1.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 ul {
@@ -28,22 +34,12 @@ ul {
 
 a {
     text-decoration: none;
-    color: var(--text);
-}
-
-a:visited {
-    color: var(--text);
-}
-
-.jsImage {
-    border-radius: 50%;
 }
 
 nav {
     background-color: var(--nav);
     position: fixed;
     width: 100%;
-    padding: 20px;
     left: 0;
     top: 0;
     z-index: 1;
@@ -58,8 +54,17 @@ nav ul {
     text-align: center;
 }
 
-nav ul li {
+nav ul a {
     width: 100%;
+    padding: 20px;
+    transition: all 500ms ease-in-out;
+    color: var(--text);
+    font-size: 14pt;
+}
+
+nav ul a:hover {
+    background-color: var(--text);
+    color: var(--btn)
 }
 
 header {
@@ -75,6 +80,19 @@ header {
     border-radius: 12px 12px 0 0;
     gap: 40px;
     font-size: 14pt;
+}
+
+header a {
+    background-color: var(--text);
+    color: var(--btn);
+    padding: 5px;
+    border-radius: 4px;
+    transition: all 500ms ease-in-out;
+}
+
+header a:hover {
+    background-color: var(--btn);
+    color: var(--text);    
 }
 
 main {
@@ -101,18 +119,17 @@ article {
     background-color: var(--header);
     max-width: 100%;
     padding: 20px;
+    padding-bottom: 60px;
     text-align: center;
 }
 
-aside {
-    margin: 0 auto;
-    background-color: var(--main);
-    max-width: 100%;
-    padding: 20px;
-    padding-bottom: 100px;
-    text-align: center;
-    display: flex;
-    margin: 0 auto;
+article ul {
+    display: inline-flex;
+}
+
+article img {
+    border-radius: 50%;
+    padding: 5px;
 }
 
 footer {
@@ -171,9 +188,6 @@ footer {
 }
 
 @media only screen and (max-width: 460px){
-    nav{
-        width: 90%;
-    }
 
     main {
         font-size: 12pt;
@@ -181,5 +195,16 @@ footer {
 
     header {
         font-size: 12pt;
+    }
+
+    nav ul a {
+        font-size: 11pt;
+    }
+}
+
+@media only screen and (max-width: 380px){
+
+    nav ul a{
+        font-size: 9pt;
     }
 }
