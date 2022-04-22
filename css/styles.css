@@ -133,6 +133,11 @@ article img {
     padding: 5px;
 }
 
+#contact {
+    background-color: var(--main);
+    color: var(--text);
+}
+
 footer {
     background-color: var(--nav);
     width: 100%;
@@ -205,11 +210,29 @@ footer {
     #mid {
         margin-bottom: 10%;
     }
+
+    header h1 {
+        font-size: 18pt;
+    }
+
+    header img {
+        width: 80%;
+        height: 95%;
+    }
 }
 
 @media only screen and (max-width: 380px){
 
     nav ul a{
         font-size: 9pt;
+    }
+
+    header h1 {
+        font-size: 16pt;
+    }
+
+    header img {
+        width: 80%;
+        height: 95%;
     }
 }
