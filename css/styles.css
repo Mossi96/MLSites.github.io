@@ -1,3 +1,4 @@
+/* Core */
 :root {
     --body: rgb(36, 19, 97);
     --text: #fff;
@@ -7,7 +8,7 @@
     --anim: rgb(191, 168, 253);
     --btn: rgb(22, 3, 73);
     --skills: rgba(48, 37, 97, 0.637);
-    --form: rgb(57, 43, 119);
+    --form: rgb(11, 1, 58);
 }
 
 * {
@@ -16,6 +17,14 @@
 html {
     scroll-behavior: smooth;
 }
+
+/* Start of page styling 
+*****************************************************************
+*****************************************************************
+*****************************************************************
+*****************************************************************
+*****************************************************************
+*/
 
 body {
     background-color: var(--body);
@@ -37,6 +46,26 @@ ul {
 a {
     text-decoration: none;
 }
+
+#container {
+    margin: 0 auto;
+    max-width: 100%;
+    
+}
+
+#mid {
+    margin: 0 auto;
+    transform: translateY(3%);
+    margin-bottom: 5%;
+}
+
+/* Navigation 
+*****************************************************************
+*****************************************************************
+*****************************************************************
+*****************************************************************
+*****************************************************************
+*/
 
 nav {
     background-color: var(--nav);
@@ -69,6 +98,14 @@ nav ul a:hover {
     color: var(--btn)
 }
 
+/* Header 
+*****************************************************************
+*****************************************************************
+*****************************************************************
+*****************************************************************
+*****************************************************************
+*/
+
 header {
     margin: 0 auto;
     background-color: var(--header);
@@ -84,19 +121,18 @@ header {
     font-size: 14pt;
 }
 
-header button {
+header a {
     background-color: var(--text);
     color: var(--btn);
     padding: 5px;
     border-radius: 4px;
     transition: all 500ms ease-in-out;
     animation: imgload3 4s ease-in-out;
-    border: none;
     font-size: 12pt;
     cursor: pointer;
 }
 
-header button:hover {
+header a:hover {
     background-color: var(--btn);
     color: var(--text);    
 }
@@ -104,6 +140,30 @@ header button:hover {
 header p {
     animation: imgload2 3s ease-in-out;
 }
+
+.self {
+    border-radius: 8px;
+    box-shadow: #02010a96 0px 0px 4px 0px,
+    #02010a96 0px 0px 16px 0px;
+    animation: imgload 2s ease-in-out;
+}
+
+span {
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+span.fade{
+    opacity: 1;
+}
+
+/* Main 
+*****************************************************************
+*****************************************************************
+*****************************************************************
+*****************************************************************
+*****************************************************************
+*/
 
 main {
     font-size: 14pt;
@@ -124,6 +184,14 @@ main p {
     border-bottom: 1px solid var(--text);
 }
 
+/* Article 
+*****************************************************************
+*****************************************************************
+*****************************************************************
+*****************************************************************
+*****************************************************************
+*/
+
 article {
     margin: 0 auto;
     background-color: var(--skills);
@@ -140,11 +208,11 @@ article {
 
 article ul {
     display: inline-flex;
+    gap: 20px;
 }
 
 article img {
     border-radius: 50%;
-    padding: 5px 20px;
 }
 
 article p {
@@ -152,6 +220,32 @@ article p {
     padding-top: 40px;
     font-size: 14pt;
 }
+
+.html5 {
+    box-shadow: #ff4800be 0 0 0 0px;
+    animation: htmlpulse 2s ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+.css3 {
+    box-shadow: #618bfdea 0 0 0 0px;
+    animation: csspulse 2s ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+.js {
+    box-shadow: #f3db04e1 0 0 0 0px;
+    animation: jspulse 2s ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+/* Footer  
+*****************************************************************
+*****************************************************************
+*****************************************************************
+*****************************************************************
+*****************************************************************
+*/
 
 #contact {
     background-color: var(--main);
@@ -173,44 +267,13 @@ footer {
     
 }
 
-#container {
-    margin: 0 auto;
-    max-width: 100%;
-    
-}
-
-#mid {
-    margin: 0 auto;
-    transform: translateY(3%);
-    margin-bottom: 5%;
-}
-
-.self {
-    border-radius: 8px;
-    box-shadow: #02010a96 0px 0px 4px 0px,
-    #02010a96 0px 0px 16px 0px;
-    animation: imgload 2s ease-in-out;
-}
-
-span {
-    opacity: 0;
-    transition: all 1s ease;
-}
-
-span.fade{
-    opacity: 1;
-}
-
-#form {
-    position: absolute;
-    display: none;
-    opacity: 0;
-    background-color: var(--form);
-    width: 60%;
-    height: 30%;
-    z-index: 1;
-    border-radius: 8px;
-}
+/* Keyframes  
+*****************************************************************
+*****************************************************************
+*****************************************************************
+*****************************************************************
+*****************************************************************
+*/
 
 @keyframes onload {
     0% {
@@ -262,7 +325,57 @@ span.fade{
     }
 }
 
-@media only screen and (max-width: 460px){
+@keyframes htmlpulse {
+    0% {
+        box-shadow: #ff4800be 0 0 0 0px;    
+    }
+
+    50% {
+        box-shadow: #ff4800be 0 0 0 4px;    
+    }
+
+    100% {
+        box-shadow: #ff4800be 0 0 0 0px;
+    }
+}
+
+@keyframes csspulse {
+    0% {
+        box-shadow: #618bfdea 0 0 0 0px;    
+    }
+
+    50% {
+        box-shadow: #618bfdea 0 0 0 4px;   
+    }
+
+    100% {
+        box-shadow: #618bfdea 0 0 0 0px;
+    }
+}
+
+@keyframes jspulse {
+    0% {
+        box-shadow: #f3db04e1 0 0 0 0px;    
+    }
+
+    50% {
+        box-shadow: #f3db04e1 0 0 0 4px;   
+    }
+
+    100% {
+        box-shadow: #f3db04e1 0 0 0 0px;
+    }
+}
+
+/* Medies Queries  
+*****************************************************************
+*****************************************************************
+*****************************************************************
+*****************************************************************
+*****************************************************************
+*/
+
+@media only screen and (max-width: 480px){
 
     main {
         font-size: 12pt;
@@ -291,10 +404,6 @@ span.fade{
         height: 95%;
     }
 
-    article img {
-        padding: 5px 10px;
-    }
-
     #form {
         width: 90%;
     }
@@ -311,7 +420,11 @@ span.fade{
     }
 
     header img {
-        width: 80%;
+        width: 75%;
         height: 95%;
+    }
+
+    header h2 {
+        font-size: 16pt;
     }
 }
